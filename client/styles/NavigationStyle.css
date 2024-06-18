@@ -1,0 +1,46 @@
+/***
+ * Navigation
+ ***/
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.bottom-navigation button {
+  background: none;
+  border: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 48px;
+}
+
+/* .bottom-navigation button:focus,
+.bottom-navigation button:hover {
+  color: #007bff;
+} */
+
+.bottom-navigation button.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* .bottom-navigation a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+}
+
+.bottom-navigation a.active {
+  color: #007bff;
+  font-weight: bold;
+} */
