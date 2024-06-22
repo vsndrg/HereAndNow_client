@@ -1,0 +1,86 @@
+/***
+ * Navigation
+ ***/
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('../assets/fonts/SFUIText-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SF UI Display Semibold';
+  src: url('../assets/fonts/SFUIText-Semibold.ttf');
+}
+
+@font-face {
+  font-family: 'SF UI Display Header';
+  src: url('../assets/fonts/SFUIText-Medium.ttf');
+}
+
+.bottom-navigation {
+
+  position: fixed;
+  /* bottom: 1vh; */
+  /* width: 50%; */
+  bottom: 2vh;
+  left: 50%;
+  min-width: 80%;
+  max-width: 80%;
+  /* max-width: 30vw; */
+  /* height: 4vh; */
+  transform: translate(-50%);
+  /* height: 100%; */
+  /* background-color: beige; */
+  /* box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 3vmax;
+
+  background-color: rgba(220, 220, 220, 0.4);
+  backdrop-filter: blur(47px);
+  -webkit-backdrop-filter: blur(47px);
+
+  box-sizing: border-box;
+}
+
+.bottom-navigation button {
+  flex: 1;
+  /* #007bff; */
+  border: none;
+  border-radius: 2.3vmax;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgb(90, 90, 90);
+  font-size: 3.5vw;
+  font-family: 'SF UI Display Semibold';
+  text-align: center;
+  cursor: pointer;
+
+  margin: 0 10px;
+  width: calc((80vw - 10px * 6) / 3.0);
+  height: 4vmax;
+
+  outline: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent !important;
+  transition: background-color 0.3s ease-out;
+
+  box-sizing: border-box;
+}
+
+.bottom-navigation button:focus, 
+.bottom-navigation button:active
+.bottom-navigation button:focus:active {
+  outline: none;
+}
+
+.bottom-navigation button.active {
+  background-color: rgba(110, 110, 110, 0.4);
+  color: white;
+}
+
+.bottom-navigation button:active {
+  background-color: rgba(110, 110, 110, 0.4);
+}

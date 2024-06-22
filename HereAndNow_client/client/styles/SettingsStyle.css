@@ -1,0 +1,366 @@
+/***
+ * Settings
+ ***/
+
+@font-face {
+  font-family: 'SF UI Display';
+  src: url('../assets/fonts/SFUIText-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'SF UI Display Header';
+  src: url('../assets/fonts/SFUIText-Medium.ttf');
+}
+
+.settings-wrapper {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 6vh);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.settings-content {
+  min-width: 33%;
+  max-width: 50vh;
+  width: 80%;
+  height: 80%;
+  background-color: beige;
+  border-radius: 4vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  margin: 0;
+}
+
+.settings-content-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 50vh
+}
+
+.user-info-wrapper {
+  width: 100%;
+  height: 40%;
+}
+
+.div-row-user-info {
+  width: 100%;
+  height: 50%;
+  /* margin-bottom: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button {
+  position: absolute;
+
+  top: 30px;
+  right: 30px;
+
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+
+.edit-button button {
+  width: auto;
+  height: auto;
+  padding: 25% 50%;
+  /* padding: 10px; */
+  background-color: rgb(76.5, 119.85, 204); /* #007bff; */
+  border: none;
+  border-radius: 1.5vh;
+  color: white;
+  font-size: 1.6vh;
+  font-family: 'SF UI Display';
+  cursor: pointer;
+}
+
+.row-profile-photo {
+  /* height: 30%; */
+  height: 70%;
+}
+
+.row-profile-photo img{
+  scale: 50%;
+  border-radius: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.row-user-info {
+  height: fit-content;
+  flex-direction: column;
+
+  /* margin-top: 10%; */
+}
+
+.row-name-a {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  font-family: 'SF UI Display Header';
+  font-size: 1.5vh;
+  padding: 0px;
+}
+
+.row-name-a h1 {
+  margin: 10px;
+}
+
+.row-user-name p {
+  margin: 5px;
+}
+
+.row-user-name {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  font-family: 'SF UI Display';
+  font-size: 1.5vh;
+}
+
+.buttons-wrapper {
+  width: 100%;
+  height: 60%;
+}
+
+.div-row-buttons {
+  width: 100%;
+  height: 30%;
+  /* margin-bottom: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-button-block {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 80%;
+  height: 100%;
+  /* padding: 10px; */
+  background-color: rgb(76.5, 119.85, 204);
+  /* #007bff; */
+  border: none;
+  border-radius: 2.3vh;
+  color: white;
+  font-size: 2vh;
+  font-family: 'SF UI Display';
+  cursor: pointer;
+  /* transition: background-color 0.3s; */
+  /* margin: 10px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  touch-action: manipulation;
+  outline: none;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.button:active {
+  background-color: rgb(64, 97, 165);
+}
+
+.change-photo-button {
+  height: 30%;
+}
+
+.block-button {
+  height: 30%;
+}
+
+.logout-button {
+  background-color: rgb(210, 30, 20);
+}
+
+.logout-button:active {
+  background-color: rgb(172, 24, 17);
+}
+
+.delete-acc-button {
+  background-color: rgb(210, 30, 20);
+}
+
+.delete-acc-button:active {
+  background-color: rgb(172, 24, 17);
+}
+
+/*** Toggle handle ***/
+
+.hide-geo-toggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hide-geo-toggle input {
+  display: none;
+}
+
+.hide-geo-toggle i {
+  width: 15%;
+  height: 80%;
+
+  border-radius: 2.3vh;
+
+  background-color: rgb(173, 173, 173);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0.5%;
+  box-sizing: border-box;
+
+  transition: background-color 0.2s;
+}
+
+.hide-geo-toggle i::before {
+  content: "";
+  width: 50%;
+  height: 85%;
+  /* margin-left: 10%; */
+  background-color: white;
+  /* border: none; */
+
+  position: absolute;
+  border-radius: 100%;
+
+  transition: all 0.15s ease-out;
+}
+
+.hide-geo-toggle i::after {
+  content: "";
+  width: 50%;
+  height: 85%;
+  /* margin-right: 5%; */
+  background-color: white;
+  /* border: none; */
+  
+  position: absolute;
+  border-radius: 100%;
+
+  transition: all 0.15s ease-out;
+}
+
+.hide-geo-toggle input:checked + i {
+  background-color: rgb(17, 219, 17);
+}
+
+.hide-geo-toggle input:checked + i::before {
+  /* transform: translateX(85%) scale3d(0, 0, 0); */
+  animation: move-and-stretch 0.15s ease-out forwards;
+}
+
+.hide-geo-toggle input:checked + i::after {
+  /* transform: translateX(85%); */
+  box-shadow: -0.15em 0 0.5em rgba(0, 0, 0, 0.2);
+  animation: move-and-stretch 0.15s ease-out forwards;
+}
+
+.hide-geo-toggle input:not(:checked) + i::before {
+  /* transform: translateX(85%) scaleX(1.5); */
+  box-shadow: 0.15em 0 0.5em rgba(0, 0, 0, 0.2);
+  animation: move-and-stretch-reverse 0.15s ease-out backwards;
+}
+
+.hide-geo-toggle input:not(:checked) + i::after {
+  /* transform: translateX(85%) scaleX(1.5); */
+  animation: move-and-stretch-reverse 0.15s ease-out backwards;
+}
+
+.no-animation .hide-geo-toggle i::before,
+.no-animation .hide-geo-toggle i::after {
+  transition: none !important;
+}
+
+@keyframes move-and-stretch {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    transform: translateX(40%) scaleX(1.2);
+  }
+  100% {
+    transform: translateX(80%) scaleX(1);  
+  }
+}
+
+@keyframes move-and-stretch-reverse {
+  0% {
+    transform: translateX(80%) scaleX(1);
+  }
+
+  50% {
+    transform: translateX(40%) scaleX(1.2);
+  }
+
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+
+/*** Map Styles Dropdown Handle ***/
+
+.map-styles-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.map-styles-dropdown ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.map-styles-dropdown ul li {
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.map-styles-dropdown ul li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Arrow icon styling */
+
+.map-style-button {
+  position: relative;
+}
+
+.fa-chevron-right {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 1.2s ease-in;
+}
+
+.open {
+  transform: translateY(-50%) rotate(90deg);
+}
